@@ -18,6 +18,6 @@ namespace AluguelCarro.Models
 
         public ICollection<Aluguel> Alugueis { get; set; }
 
-        //public Conta Conta { get; set; }
+        public Conta Conta { get; set; }
     }
 }
