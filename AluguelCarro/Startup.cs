@@ -59,7 +59,7 @@ namespace AluguelCarro
             });
 
             services.AddScoped<INivelAcessoRepositorio, NivelAcessoRepositorio>();
-            //services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
             //services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
             //services.AddScoped<IContaRepositorio, ContaRepositorio>();
             //services.AddScoped<ICarroRepositorio, CarroRepositorio>();
