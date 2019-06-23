@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AluguelCarro.Models;
+using AluguelCarro.AcessoDados.Repositorios;
+using AluguelCarro.AcessoDados.Interfaces;
 
 namespace AluguelCarro
 {
@@ -55,6 +57,16 @@ namespace AluguelCarro
                 opcoes.Password.RequiredLength = 6;
                 opcoes.Password.RequiredUniqueChars = 1;
             });
+
+            services.AddScoped<INivelAcessoRepositorio, NivelAcessoRepositorio>();
+            //services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            //services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
+            //services.AddScoped<IContaRepositorio, ContaRepositorio>();
+            //services.AddScoped<ICarroRepositorio, CarroRepositorio>();
+            //services.AddScoped<IAluguelRepositorio, AluguelRepositorio>();
+
+            //services.Configure<ConfiguracoesEmail>(Configuration.GetSection("ConfiguracoesEmail"));
+            //services.AddScoped<IEmail, Email>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
